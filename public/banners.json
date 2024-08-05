@@ -1,0 +1,16 @@
+[
+    {
+      "title": "Boost Your Leads",
+      "description": "Full Stack Masters Course",
+      "cta": "Learn more",
+      "image": "/img1.png",
+      "background": "/background1.jpg"
+    },
+    {
+      "title": "Boost Your Leads",
+      "description": "Build websites from Scratch",
+      "cta": "Learn more",
+      "image": "/img2.png",
+      "background": "/background2.jpg"
+    }
+  ]

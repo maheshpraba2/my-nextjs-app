@@ -1,33 +1,96 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
+/* General body styling */
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+/* Bottom sheet styling */
+.bottom-sheet {
+  padding: 20px;
+  background: white;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  max-width: 500px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.bottom-sheet h2 {
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+
+.bottom-sheet form {
+  display: flex;
+  flex-direction: column;
+}
+
+.bottom-sheet label {
+  margin-bottom: 10px;
+  font-size: 1rem;
+}
+
+.bottom-sheet input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-bottom: 15px;
+}
+
+.bottom-sheet button {
+  padding: 10px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.bottom-sheet button:hover {
+  background-color: #0056b3;
+}
+
+/* Container for the homepage */
+.homepage {
+  padding: 20px;
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  min-height: 100vh; /* Ensure it takes at least the full height of the viewport */
+  overflow: hidden; /* Prevent scrolling */
+}
+
+/* Flex container for banners */
+.banner-grid {
+  display: flex;
+  flex-wrap: nowrap; /* Prevent wrapping to the next line */
+  align-items: flex-start; /* Align items to the start of the container */
+  width: 100vw; /* Full viewport width */
+  overflow: hidden; /* Ensure no horizontal scrolling */
+}
+
+/* Ad banner styling */
+.ad-banner {
+  position: relative;
+  padding: 20px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  color: white;
+  text-shadow: 1px 1px 2px black;
+  width: 500px; /* Fixed width */
+  height: 500px; /* Fixed height */
+  box-sizing: border-box; /* Include padding and border in element's total width and height */
+  margin-right: 20px; /* Space between banners */
+}
+
+/* Remove the margin for the last banner */
+.ad-banner:last-child {
+  margin-right: 0;
 }
